@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">    
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row my-4  bg-light p-4 border rounded">
+                <div class="col-12">
+                    <div class="h3 font-weight-normal">
+                        +admin_name+
+                        <div class="lead">
+                            <i class="bi bi-mortarboard-fill"></i>
+                            Admin
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-column">
+            <div class="text-center m-2">
+                <a href="https://www.google.com/" class="btn btn-warning w-25">
+                    <i class="bi-person-fill-add"></i>
+                    Add Student
+                </a>
+            </div>
+            <div class="text-center m-2" >
+                <a onclick="myFunction()" class="btn btn-warning w-25">
+                    <i class="bi bi-search"></i>
+                    Find Student
+                </a>
+            </div>
+            <div class="text-center my-2" id="inp" style="visibility: hidden;">
+                <form action="Find_Student" method="post">
+                    <input type="text" name="UserName" class="w-25" placeholder="Enter ID">
+            </div>
+            <div class="text-center m-2" id="btn" style="visibility: hidden;">
+                <div class="btn btn-info w-25">
+                    <input type="submit" value="Search" style="border: 0cm;background-color: transparent;">
+                </div>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            function myFunction() {
+                var inp = document.getElementById("inp");
+                var btn = document.getElementById("btn");
+
+                if (inp.style.visibility === "hidden" && btn.style.visibility === "hidden") {
+                    inp.style.visibility = "visible";
+                    btn.style.visibility = "visible";
+                }
+            }
+        </script>
+
+<!-- <button onclick="toggleInput()">Show Input Field</button>
+<input type="text" id="myInput" placeholder="Enter something">
+
+<script>
+  function toggleInput() {
+    var inputField = document.getElementById("myInput");
+    
+    // Toggle the visibility of the input field
+    if (inputField.style.display === "none") {
+      inputField.style.display = "block";
+    } else {
+      inputField.style.display = "none";
+    }
+  }
+</script> -->
+    </body>
+</html>
